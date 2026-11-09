@@ -30,6 +30,7 @@ import {
   Zap,
 } from "lucide-react";
 import { toast } from "sonner";
+import { Link } from "wouter";
 
 type Language = "fr" | "en" | "ar";
 
@@ -323,10 +324,10 @@ export default function Home() {
             <span className="brand-word">DepXpreS<span>.</span></span>
           </button>
           <nav className={`main-nav ${menuOpen ? "main-nav-open" : ""}`}>
-            <button onClick={() => scrollTo("platform")}>{t.nav[0]}</button>
-            <button onClick={() => scrollTo("apps")}>{t.nav[1]}</button>
-            <button onClick={() => scrollTo("modules")}>{t.nav[2]}</button>
-            <button onClick={() => scrollTo("licenses")}>{t.nav[3]}</button>
+            <Link href="/platform" onClick={() => setMenuOpen(false)}>{t.nav[0]}</Link>
+            <Link href="/applications" onClick={() => setMenuOpen(false)}>{t.nav[1]}</Link>
+            <Link href="/modules" onClick={() => setMenuOpen(false)}>{t.nav[2]}</Link>
+            <Link href="/licenses" onClick={() => setMenuOpen(false)}>{t.nav[3]}</Link>
             <button className="mobile-portal" onClick={showComingSoon}>{t.signIn} <ArrowRight size={15} /></button>
           </nav>
           <div className="nav-actions">
