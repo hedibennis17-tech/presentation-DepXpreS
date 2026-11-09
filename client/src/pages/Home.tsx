@@ -40,14 +40,21 @@ const ui = {
     language: "Langue",
     nav: ["Plateforme", "Applications", "Modules", "Licences"],
     signIn: "Espace client",
-    heroKicker: "DEPXPRES / MOBILITY OPERATING SYSTEM",
-    heroTitle: "Votre propre plateforme de mobilité et livraison.",
+    heroKicker: "DEPXPRES / LICENCE LOGICIELLE INTERNATIONALE",
+    heroTitle: "Achetez le système. Opérez sous votre marque.",
     heroBody:
-      "Un système logiciel complet pour lancer, opérer et faire évoluer votre activité — avec quatre applications connectées, un centre de contrôle et une licence adaptée à votre marché.",
+      "DepXpreS est un logiciel complet de mobilité, livraison et commerce. Vous achetez une licence indépendante, recevez le code source et déployez votre propre opération sur votre domaine — sans franchise obligatoire ni partage de revenus.",
     explore: "Explorer la plateforme",
     compare: "Voir les licences",
     live: "Architecture connectée",
     liveDetail: "Un seul système. Chaque opération synchronisée.",
+    commercialModel: "MODÈLE COMMERCIAL",
+    licensedSoftware: "Licence logicielle indépendante",
+    sourceIncluded: "Code source inclus",
+    noRevenueShare: "Sans partage de revenus",
+    fourApps: "4 applications incluses",
+    oneDomain: "Domaine autorisé selon la formule",
+    supportOptions: "Support selon la licence choisie",
     appsEyebrow: "01 / ÉCOSYSTÈME",
     appsTitle: "Quatre expériences.\nUn même moteur.",
     appsBody: "DepXpreS relie les clients, chauffeurs, partenaires et opérateurs dans une seule infrastructure opérationnelle.",
@@ -79,14 +86,21 @@ const ui = {
     language: "Language",
     nav: ["Platform", "Applications", "Modules", "Licenses"],
     signIn: "Customer portal",
-    heroKicker: "DEPXPRES / MOBILITY OPERATING SYSTEM",
-    heroTitle: "Your own mobility and delivery platform.",
+    heroKicker: "DEPXPRES / INTERNATIONAL SOFTWARE LICENSE",
+    heroTitle: "Buy the system. Operate under your brand.",
     heroBody:
-      "A complete software system to launch, operate, and scale your business — with four connected applications, one control center, and a license built for your market.",
+      "DepXpreS is a complete mobility, delivery, and commerce software system. Buy an independent license, receive the source code, and deploy your own operation on your domain — with no required franchise or revenue sharing.",
     explore: "Explore the platform",
     compare: "View licenses",
     live: "Connected architecture",
     liveDetail: "One system. Every operation synchronized.",
+    commercialModel: "COMMERCIAL MODEL",
+    licensedSoftware: "Independent software license",
+    sourceIncluded: "Source code included",
+    noRevenueShare: "No revenue sharing",
+    fourApps: "4 applications included",
+    oneDomain: "Authorized domain by plan",
+    supportOptions: "Support according to your license",
     appsEyebrow: "01 / ECOSYSTEM",
     appsTitle: "Four experiences.\nOne operating engine.",
     appsBody: "DepXpreS connects customers, drivers, partners, and operators through one operational infrastructure.",
@@ -118,14 +132,21 @@ const ui = {
     language: "اللغة",
     nav: ["المنصة", "التطبيقات", "الوحدات", "التراخيص"],
     signIn: "بوابة العميل",
-    heroKicker: "DEPXPRES / MOBILITY OPERATING SYSTEM",
-    heroTitle: "منصتك الخاصة للتنقل والتوصيل.",
+    heroKicker: "DEPXPRES / ترخيص برمجي دولي",
+    heroTitle: "اشترِ النظام. شغّل عملياتك تحت علامتك.",
     heroBody:
-      "نظام برمجي متكامل لإطلاق وإدارة وتوسيع أعمالك، مع أربعة تطبيقات مترابطة ومركز تحكم وترخيص يناسب سوقك.",
+      "DepXpreS هو نظام برمجي متكامل للتنقل والتوصيل والتجارة. اشترِ ترخيصا مستقلا، واحصل على الكود المصدري، وانشر عملياتك على نطاقك دون امتياز إلزامي أو مشاركة في الإيرادات.",
     explore: "اكتشف المنصة",
     compare: "عرض التراخيص",
     live: "بنية مترابطة",
     liveDetail: "نظام واحد. كل عملية متزامنة.",
+    commercialModel: "النموذج التجاري",
+    licensedSoftware: "ترخيص برمجي مستقل",
+    sourceIncluded: "الكود المصدري مشمول",
+    noRevenueShare: "بدون مشاركة الإيرادات",
+    fourApps: "أربعة تطبيقات مشمولة",
+    oneDomain: "نطاق مصرح حسب الخطة",
+    supportOptions: "دعم حسب الترخيص المختار",
     appsEyebrow: "01 / المنظومة",
     appsTitle: "أربع تجارب.\nمحرك تشغيلي واحد.",
     appsBody: "تربط DepXpreS العملاء والسائقين والشركاء والمشغلين ضمن بنية تشغيلية واحدة.",
@@ -327,6 +348,7 @@ export default function Home() {
           <div className="hero-grid-lines" />
           <div className="hero-content page-width">
             <div className="hero-copy">
+              <div className="context-ribbon"><span className="context-label">{t.commercialModel}</span><strong>{t.licensedSoftware}</strong><span className="context-separator">/</span><span>{t.sourceIncluded}</span><span className="context-separator">/</span><span>{t.noRevenueShare}</span></div>
               <div className="status-pill"><span className="status-pulse" />{t.live}</div>
               <div className="eyebrow hero-eyebrow"><span className="eyebrow-dot" />{t.heroKicker}</div>
               <h1>{t.heroTitle}</h1>
@@ -335,6 +357,7 @@ export default function Home() {
                 <button className="button-primary" onClick={() => scrollTo("apps")}>{t.explore}<ArrowRight size={17} /></button>
                 <button className="button-ghost" onClick={() => scrollTo("licenses")}>{t.compare}<ArrowRight size={17} /></button>
               </div>
+              <div className="hero-qualifiers"><span><Check size={14} />{t.fourApps}</span><span><Check size={14} />{t.oneDomain}</span><span><Check size={14} />{t.supportOptions}</span></div>
               <div className="hero-note"><ShieldCheck size={15} /><span>{t.liveDetail}</span></div>
             </div>
             <div className="hero-console" aria-label="DepXpreS control center preview">
