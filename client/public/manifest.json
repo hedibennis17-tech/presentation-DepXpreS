@@ -1,0 +1,9 @@
+{
+  "name": "DepXpreS — Mobility & Delivery OS",
+  "short_name": "DepXpreS",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#061019",
+  "theme_color": "#061019",
+  "description": "Votre propre plateforme de mobilité et livraison."
+}
