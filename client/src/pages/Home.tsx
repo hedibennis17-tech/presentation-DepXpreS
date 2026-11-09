@@ -244,16 +244,20 @@ const moduleContent = {
 } as const;
 
 const plans = [
-  { name: "Independent", price: "1,000", description: "Pour lancer un domaine avec votre propre équipe.", features: ["Code source complet", "Les 4 applications", "1 domaine autorisé", "1 activation de licence", "Installation autonome"], accent: "neutral" },
-  { name: "Assisted", price: "2,000", description: "Pour démarrer avec six mois de soutien technique.", features: ["Tout ce qui est inclus dans Independent", "Assistance installation & configuration", "Aide APIs et variables d'environnement", "Six mois de soutien technique", "Dépannage couvert selon contrat"], accent: "featured" },
-  { name: "Multi-domain", price: "10,000", description: "Pour opérer plusieurs marques ou marchés.", features: ["Code source complet", "Les 4 applications", "Plusieurs domaines autorisés", "Gestion des licences et domaines", "Soutien sur demande selon contrat"], accent: "gold" },
+  { name: "Independent", price: "1,000", description: "Pour les équipes techniques autonomes qui veulent lancer sans dépendance.", features: ["Code source complet des 4 apps", "1 domaine autorisé", "1 activation de licence", "Documentation d'installation", "Aucun support technique inclus"], accent: "neutral" },
+  { name: "Assisted", price: "2,000", description: "Pour démarrer accompagné avec six mois de soutien technique inclus.", features: ["Tout ce qui est inclus dans Independent", "Assistance à l'installation & configuration", "Aide APIs et variables d'environnement", "Six mois de soutien technique", "Dépannage couvert selon contrat"], accent: "featured" },
+  { name: "Multi-domain", price: "10,000", description: "Pour opérer plusieurs marques, régions ou marchés sous une seule licence.", features: ["Code source complet des 4 apps", "Plusieurs domaines autorisés", "Gestion des activations multi-domaines", "Soutien technique sur demande", "Convient aux agences & opérateurs multi-marchés"], accent: "gold" },
 ];
 
 const faqs = [
-  ["Le code source est-il inclus ?", "Oui. Les trois formules incluent le code source des quatre applications. Les droits d'utilisation, de modification et de déploiement sont définis par le contrat de licence."],
-  ["La licence à 2 000 $ inclut-elle du support ?", "Oui. Elle inclut six mois de soutien technique, avec les modalités, délais et limites précisées dans le contrat."],
-  ["Puis-je utiliser ma propre marque ?", "Oui. DepXpreS est conçu pour être déployé sous votre marque, avec votre domaine autorisé et votre configuration opérationnelle."],
-  ["Les paiements sont-ils déjà connectés ?", "Le site présente l'offre commerciale. La configuration Stripe, PayPal ou d'autres fournisseurs dépend du déploiement livré et des intégrations retenues."],
+  ["Le code source est-il inclus ?", "Oui. Les trois formules incluent le code source complet des quatre applications. Les droits d'utilisation, de modification et de déploiement sont définis par le contrat de licence."],
+  ["La licence à 2 000 $ inclut-elle du support ?", "Oui. Elle inclut six mois de soutien technique : assistance à l'installation, configuration des APIs, dépannage et incidents couverts selon les modalités du contrat."],
+  ["Puis-je utiliser ma propre marque ?", "Oui. DepXpreS est conçu pour être déployé sous votre marque, avec votre nom, votre domaine autorisé et votre identité visuelle."],
+  ["Les paiements sont-ils déjà connectés ?", "Le système inclut les intégrations Stripe et PayPal. Vous devez créer vos propres comptes et fournir vos clés API lors du déploiement."],
+  ["Combien de domaines puis-je autoriser ?", "Les licences à 1 000 $ et 2 000 $ autorisent un seul domaine. La licence à 10 000 $ couvre plusieurs domaines selon les conditions définies au contrat."],
+  ["Que se passe-t-il après les 6 mois de support ?", "Vous pouvez renouveler un forfait de support payant. Les modalités et tarifs sont définis au moment de la demande de renouvellement."],
+  ["La licence est-elle une franchise ?", "Non. Il s'agit d'une licence logicielle indépendante. Aucun partage de revenus ni partenariat obligatoire avec Benniscom n'est requis."],
+  ["Ai-je besoin de mon propre serveur ?", "Oui. Vous déployez sur votre propre hébergement (Vercel, VPS ou tout serveur Node.js compatible). Firebase est utilisé pour l'authentification et la base de données."],
 ];
 
 function LogoMark() {

@@ -192,3 +192,17 @@ h1::first-line { color: #f8ffff; }
 .info-bottom-cta { display: flex; align-items: center; justify-content: space-between; gap: 30px; margin-top: 105px; margin-bottom: 105px; padding: 36px 40px; border: 1px solid rgba(115,232,231,.25); border-radius: 20px; background: linear-gradient(120deg, rgba(17,54,63,.75), rgba(8,24,33,.8)); }.info-bottom-cta h2 { margin-top: 13px; font-size: clamp(1.9rem, 3.5vw, 3.1rem); letter-spacing: -.07em; }.info-footer { padding-bottom: 24px; }.info-footer .footer-bottom { align-items: center; }.info-footer a { color: var(--muted); text-decoration: none; font-size: 9px; }.info-footer a:hover { color: var(--cyan); }
 @media (max-width: 760px) { .info-header { width: calc(100% - 32px); }.info-header nav { gap: 10px; }.info-header nav > a:not(.info-header-cta) { display: none; }.info-header-cta { font-size: 9px !important; }.info-hero { padding: 85px 0 70px; }.info-hero-grid { grid-template-columns: 1fr; gap: 45px; }.info-hero h1 { font-size: 3.7rem; }.info-hero p { font-size: 14px; }.info-hero-icon { width: 155px; height: 155px; }.info-hero-icon svg { width: 42px; }.info-app-grid, .info-sections { grid-template-columns: 1fr; padding-top: 48px; }.module-table-page { padding-top: 48px; overflow-x: auto; }.module-table-head, .module-table-row { min-width: 720px; }.info-bottom-cta { display: block; margin-top: 75px; margin-bottom: 75px; padding: 28px 22px; }.info-bottom-cta .button-primary { width: 100%; margin-top: 24px; }.info-footer .footer-bottom { display: grid; }
 }
+
+/* Purchase flow visual */
+.purchase-steps-visual { padding-top: 60px; }
+.purchase-flow { display: flex; align-items: center; justify-content: center; gap: 0; flex-wrap: wrap; }
+.purchase-step { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 24px 20px; position: relative; }
+.purchase-step:not(:last-child)::after { content: "→"; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); color: var(--cyan); opacity: .4; font-size: 18px; }
+.purchase-step-icon { display: grid; place-items: center; width: 52px; height: 52px; border: 1px solid rgba(115,232,231,.25); border-radius: 14px; color: var(--cyan); background: rgba(115,232,231,.07); }
+.purchase-step-num { color: rgba(115,232,231,.5); font-size: 9px; font-weight: 900; letter-spacing: .12em; }
+.purchase-step-label { color: var(--muted-strong); font-family: "Space Grotesk", sans-serif; font-size: 12px; font-weight: 700; }
+@media (max-width: 700px) { .purchase-step:not(:last-child)::after { display: none; } .purchase-flow { gap: 10px; } }
+
+/* Licenses visual on /licenses page */
+.licenses-cards-visual { padding-top: 60px; }
+.licenses-cards-visual .pricing-grid { gap: 18px; }
